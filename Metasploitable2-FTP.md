@@ -8,13 +8,13 @@ So I will began with scanning  the network to see the active hosts on the networ
 
 So lets try it by typing : `nbtscan -r 192.168.0.0/16 ` 
 
-![[Screenshot 2023-05-02 222142.png]]
+![Screenshot 2023-05-02 222142](https://user-images.githubusercontent.com/99927650/235774983-37a88daa-84f3-446b-b778-5c353db73c65.png)
 
 So I found that the Metasploitable server is already running and I have its IP Address.
 
 After that lets see what is the opened ports in this server , I will use Nmap for this by typing this command : `nmap -sV 192.168.37.137`
 
-![[Screenshot 2023-05-02 223039.png]]
+![Screenshot 2023-05-02 223039](https://user-images.githubusercontent.com/99927650/235775179-2cdbdb98-779c-4eb7-95dc-78adb7b3b973.png)
 
 So that tells us that there are many ports opened now , But let me test the FTP this time,
 first we should know what may cause vulnerability through the FTP service ? 
@@ -43,7 +43,7 @@ To test Anonymous access we can use the built in nmap scripts , here we should u
 `nmap --script ftp-anon -p21 192.168.37.137`
 
 And as we see that there is "Anonymous access" vulnerability here !
-![[Screenshot 2023-05-02 225302.png]]
+![Screenshot 2023-05-02 225302](https://user-images.githubusercontent.com/99927650/235775249-192e4a71-2649-4be6-8a3f-dcba303d09d5.png)
 
 
 ----------------------------------------------------------------------

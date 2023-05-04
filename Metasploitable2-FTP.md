@@ -5,7 +5,7 @@
 ## 2-Exploring The Network 
 First we should explore our network to see what is the active devices , what is the opened ports , etc..
 
-So I will began with scanning  the network to see the active hosts on the network by using a tool called `nbtscan` .
+So I will begin with scanning  the network to see the active hosts on the network by using a tool called `nbtscan` .
 `nbtscan` is a command-line tool in Linux used to discover devices in a network that use NetBIOS over TCP/IP protocol. It sends a NetBIOS Name Service (NBT-NS) request to the specified IP address and displays the response, which includes the device's NetBIOS name, MAC address, and whether the device is a workstation or a server. It is useful for enumerating devices in a local area network and for identifying potential security risks associated with the use of NetBIOS.
 
 So lets try it by typing : `nbtscan -r 192.168.0.0/16 ` 
@@ -50,6 +50,6 @@ And as we see that there is "Anonymous access" vulnerability here !
 
 ----------------------------------------------------------------------
 
-## Testing The Remainng FTP Vulnerabilities After Exams!
+## Testing The Remaining FTP Vulnerabilities After Exams!
 
 ----------------------------------------------------------------------

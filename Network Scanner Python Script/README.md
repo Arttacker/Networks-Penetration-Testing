@@ -30,7 +30,7 @@ Replace `<ip_range>` with you wanted IP Address Range in the format of `x.x.x.x/
 ## Example Output
 ```
 ------------------------------------------------------------
- IP            MAC Address          Vendor
+ IP              MAC Address          Vendor
 ------------------------------------------------------------
  1- 192.168.1.1 | 00:11:22:33:44:55 | Cisco Systems, Inc.
  2- 192.168.1.2 | AA:BB:CC:DD:EE:FF | unknown vendor

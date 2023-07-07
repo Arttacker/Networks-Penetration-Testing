@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 
-# To take input from the user as arguments in terminal we need to use "optparse"
 import optparse
 import re
-# To run system commands we need to import subprocess module
 import subprocess
 
 

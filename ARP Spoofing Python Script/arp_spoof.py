@@ -33,19 +33,21 @@ def stop_ip_forwarding():
 
 # This function takes an IP address and gets its MAC using ARP
 def get_mac(ip):
-    # See network_scanner.py to understand more !
     arp_request = scapy.ARP(pdst=ip)
     broadcast = scapy.Ether(dst="ff:ff:ff:ff:ff:ff")
     exploring_packet = broadcast / arp_request
-    response = scapy.srp1(exploring_packet, timeout=2, verbose=False)
+
     # Checking if the target gave us its MAC Address
     try:
-        mac = response.hwsrc
-        return mac
-    except:
-        print("[-] The Target Didn't Respond With Its MAC Address \n[-] Check That The Target Is Alive And Try Again.")
-        stop_ip_forwarding()
-        sys.exit()
+        for i in range(3):
+            response = scapy.srp1(exploring_packet, timeout=2, verbose=False)
+            if response:
+                return response.hwsrc
+
+        if not response:
+            sys.exit("[-] The Target Didn't Respond With Its MAC Address")
+    except Exception as e:
+        sys.exit(f"\n[-] An unexpected error occurred: {str(e)}")
 
 
 # This function is responsible to fool the target or the gateway,

@@ -9,6 +9,7 @@ This script enables ARP spoofing, a technique used in network security testing t
 
 - Python 3.x
 - Required Python packages: `scapy`
+- Linux-based operating system (script tested on Linux)
 
 ## Usage 
 1. Clone the repository or download the `arp_spoof.py` file to your local machine.

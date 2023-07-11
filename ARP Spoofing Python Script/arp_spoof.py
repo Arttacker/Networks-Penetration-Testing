@@ -45,7 +45,7 @@ def get_mac(ip):
                 return response.hwsrc
 
         if not response:
-            sys.exit("[-] The Target Didn't Respond With Its MAC Address")
+            sys.exit("[-] The Target Didn't Respond With Its MAC Address\n[-] Check That The Ip Is Correct Or Check That Target Is Alive And Try Again")
     except Exception as e:
         sys.exit(f"\n[-] An unexpected error occurred: {str(e)}")
 

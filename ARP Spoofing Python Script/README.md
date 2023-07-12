@@ -8,7 +8,7 @@ This script enables ARP spoofing, a technique used in network security testing t
 ## Prerequisites
 
 - Python 3.x
-- Required Python packages: `scapy`
+- Required Python packages: `argparse`, `subprocess`, `sys`, `time`, `scapy`
 - Linux-based operating system (script tested on Linux)
 
 ## Usage 

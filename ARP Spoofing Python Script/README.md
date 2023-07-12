@@ -1,5 +1,5 @@
 
-# ARP Spoofing Python Script
+# ARP Spoofing Tool
 
 This script enables ARP spoofing, a technique used in network security testing to intercept and manipulate network traffic between a target device and the gateway. It allows you to capture network packets and analyze the traffic for security assessment purposes. It is also considered as a first step of performing **MITM** (Man In The Middle) Attack.
 

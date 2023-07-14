@@ -13,9 +13,9 @@ def get_arguments():
                    u" between them.\nDeveloped By (BigTrader) \u2620\ufe0f"
     parser.add_argument("-i", "--interface", dest="interface", help="The interface that will be used in the attack",
                         required=True)
-    parser.add_argument("-t", "--target_ip", dest="target_ip", help="The Target IP Address", required=True)
-    parser.add_argument("-g", "--gateway_ip", dest="gateway_ip", help="The Gateway IP Address", required=True)
-    parser.add_argument("-f", "--ip_forwarding", dest="ip_forwarding",
+    parser.add_argument("-t", "--target-ip", dest="target_ip", help="The Target IP Address", required=True)
+    parser.add_argument("-g", "--gateway-ip", dest="gateway_ip", help="The Gateway IP Address", required=True)
+    parser.add_argument("-f", "--ip-forward", dest="ip_forwarding",
                         help="Set it to 1 to allow ip_forwarding and 0 to disable it", required=True)
     arguments = parser.parse_args()
     return arguments

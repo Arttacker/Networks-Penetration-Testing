@@ -1,6 +1,6 @@
 # Networks Penetration Testing 😈
 
-Welcome to the Networks Penetration Testing repository. This repository contains a collection of tools implemented by **TheBigTrader**💀 (Me) in Python to assist in the field of network penetration testing and offensive security tests. Below is an overview of the tools included in this repository.
+Welcome to the Networks Penetration Testing repository. This repository contains a collection of tools implemented in Python to assist in the field of network penetration testing and offensive security tests. Below is an overview of the tools included in this repository.
 
 ## Table of Contents
 1. [ARP Spoofing Tool](#arp-spoofing-tool)

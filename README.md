@@ -1,19 +1,76 @@
-# Networks Penetration Testing
-This repository contains scripts and tools used for network penetration testing. The purpose of these tools is to test the security of a network by identifying vulnerabilities and potential entry points for attackers.
+# Networks Penetration Testing 😈
 
-## Contents
-The repository contains various tools for network penetration testing, including:
+Welcome to the Networks Penetration Testing repository. This repository contains a collection of tools implemented by **TheBigTrader**💀 (Me) in Python to assist in the field of network penetration testing and offensive security tests. Below is an overview of the tools included in this repository.
 
-+ Nmap scripts for network scanning and enumeration
-+ Metasploit modules for exploitation and post-exploitation
-+ SQL injection tools, such as sqlmap, for testing web application security
-+ Password cracking tools, such as John the Ripper and Hashcat, for testing password strength
-+ Wireless network auditing tools, such as Aircrack-ng, for testing wireless security
+## Table of Contents
+1. [ARP Spoofing Tool](#arp-spoofing-tool)
+2. [ARP Spoofing Detection Tool](#arp-spoofing-detection-tool)
+3. [Downloads Redirection Tool](#downloads-redirection-tool)
+4. [DNS Spoofing Tool](#dns-spoofing-tool)
+5. [HTTP Packet Sniffing Tool](#http-packet-sniffing-tool)
+6. [HTTP Code Injector Tool](#http-code-injector-tool)
+7. [Network Scanner Python Script](#network-scanner-python-script)
+8. [NetCut Tool](#netcut-tool)
+9. [Mac Changer Python Script](#mac-changer-python-script)
+10. [Additional Tools](#additional-tools)
+11. [Installation](#installation)
+12. [Usage](#usage)
+13. [Contributing](#contributing)
+14. [License](#license)
+15. [Disclaimer](#disclaimer)
+
+## ARP Spoofing Tool
+This tool allows you to intercept and modify network traffic between two hosts by poisoning their ARP caches with forged ARP requests and replies.
+
+## ARP Spoofing Detection Tool
+Detects ARP spoofing attacks on your network by monitoring ARP requests and replies for suspicious activity.
+
+## Downloads Redirection Tool
+Redirects downloads on the network to a different source, allowing you to replace downloaded files with malicious versions.
+
+## DNS Spoofing Tool
+Performs DNS spoofing attacks by intercepting DNS queries and responding with forged DNS replies, redirecting traffic to malicious sites.
+
+## HTTP Packet Sniffing Tool
+Captures and analyzes HTTP packets on the network, allowing you to monitor and manipulate HTTP traffic.
+
+## HTTP Code Injector Tool
+Injects arbitrary code into HTTP responses, enabling you to modify web pages and inject malicious scripts.
+
+## Network Scanner Python Script
+Scans the network to discover active hosts, open ports, and running services, providing a detailed map of the network.
+
+## NetCut Tool
+Allows you to cut off network access for specific devices on a network by sending forged ARP requests.
+
+## Mac Changer Python Script
+Changes the MAC address of your network interface, allowing you to anonymize your network presence.
+
+## Additional Tools
+The repository contains many more tools aimed at various aspects of network penetration testing and offensive security. Explore the codebase to discover all available functionalities.
+
+## Installation
+To install the tools in this repository, clone the repository and install the required dependencies:
+
+```bash
+git clone https://github.com/Saalehh/Networks-Penetration-Testing.git
+cd Networks-Penetration-Testing
+```
+
+Each tool has its own requirements to install them:
+```bash
+cd tool/directory/path
+pip install -r requirements.txt
+```
+
 ## Usage
-Each tool has its own instructions and usage guidelines, which can be found in their respective directories. It is important to note that these tools should only be used for ethical and legal penetration testing purposes with proper authorization from the network owner.
+Each tool in this repository comes with its own usage instructions and command-line options. Refer to the README files within each tool's directory for detailed information on how to run and utilize each tool effectively.
 
 ## Contributing
-Contributions to this repository are welcome! If you have a new tool or script that you would like to add, please create a pull request with your changes. Before contributing, please make sure that the tool is legal and ethical to use for penetration testing purposes.
+Contributions are welcome! If you have a tool or feature you would like to add, please fork the repository, create a new branch, and submit a pull request. Ensure that your code follows the project's coding standards and includes appropriate documentation.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Disclaimer
-This repository is intended for educational and testing purposes only. The tools and scripts included should only be used with proper authorization and for ethical and legal penetration testing purposes. The creator of this repository is not responsible for any misuse or illegal use of the tools included.
+These tools are provided for educational purposes only. Unauthorized use of these tools against any network without explicit permission is illegal and unethical. The authors and contributors of this repository are not responsible for any misuse or damage caused by these tools. Always obtain proper authorization before performing any penetration testing or security assessments. Use responsibly and ethically.
